@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비회원 로그인</title>
+    <script src="https://kit.fontawesome.com/4e6b8697d1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/firstScreen.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="/">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+        <div class="headertext">비회원 로그인</div>
+    </header>
+    <div class="idpwbox">
+        <div class="space"></div>
+        <div class="boxtitle">닉네임</div>
+        <input class="inputbox" id="nickname"></input>
+    </div>
+    <div class="container1">
+        <a class="button" onclick="onClicklogin2()">설정 완료</a>
+    </div>
+</body>
+<script>
+    const $nickname = document.getElementById("nickname");
+    let nickname = "";
+    const onClicklogin2 = () => {
+        let nickname = $nickname.value;
+        $nickname.value = "";
+        alert(`${nickname}으로 닉네임이 설정되었습니다.`);
+    }
+</script>
+
+</html>
